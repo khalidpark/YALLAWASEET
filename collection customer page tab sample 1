@@ -1,0 +1,157 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <meta name="viewport" content="width=device-width, initial-scale=1">
+<style><!--
+body 
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 0.5px solid #ccc;
+    background-color: #9EC6F4;
+	font-family: Arial, sans-serif;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 10px;
+
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  	text-align: right;
+	font-size: 10px;
+	font-family: Arial, sans-serif;
+}
+
+/* Style the close button */
+.topright {
+    float: left;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+  font-size:14px
+}
+
+th:first-child, td:first-child {
+  text-align: right;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2
+}
+
+.fa-check {
+  color: red;
+}
+--></style>
+<div class="tab"><button id="defaultOpen" class="tablinks" onclick="toggleCity(event, 'London')">التحقق قبل الدفع</button> <button class="tablinks" onclick="toggleCity(event, 'Paris')"> التوصيل في كوريا</button> <button class="tablinks" onclick="toggleCity(event, 'Tokyo')">حالة التوصيل الدولي</button></div>
+<div class="tabcontent" id="London"><span class="topright" onclick="toggleCity(event, 'London')">X</span>
+<h3>كيفية الشراء</h3>
+<p>ضع المنتجات التي ترغب في شرائها من المنتجات التالية في السلة ويرجي الدفع</p>
+<h3>تكلفة التوصيل المقدرة</h3>
+<p>يدفع معظم عملائنا عادةً ما بين 30 دولارًا و 50 دولارًا للشحن</p>
+<p>نحن نحاول إعادة تغليف منتجاتك وجعلها في أقل حجم لكي تكون تكلفة الشحن أقل</p>
+<p>يمكنك التحقق من طريقة حساب تكلفة الشحن المحددة في "الأسئلة الأوجبة" أدناه</p>
+<h3>الأسئلة والأجوبة</h3>
+<p>يرجى مراجعة الأسئلة المتداولة أدناه مثل الدفع والتسليم والرسوم الجمركية</p>
+<span style="color: #000000; background-color: #ffffff;"> <a style="background-color: #cccccc; color: #000000;" href="https://www.jamilabox.com" target="_blank">التحقق من الأسئلة والأجوبة☑️</a> </span>
+<p>لمزيد من الاستفسارات، يرجى الاتصال بنا على الواتساب</p>
+</div>
+<div class="tabcontent" id="Paris"><span class="topright" onclick="toggleCity(event, 'Paris')">X</span>
+<h3>حالة التوصيل في كوريا</h3>
+<h3>의자 하나가 배송이 지연되고 있습니다</h3>
+<table>
+<tbody>
+<tr>
+<td><i class="fa fa-check"></i></td>
+<td>مستعد للتوصيل</td>
+</tr>
+<tr>
+<td><i class="fa fa-check">(9/27)</i></td>
+<td>قبل وصوله إلى مكتبنا</td>
+</tr>
+<tr>
+<td><i class="fa fa-check"></i></td>
+<td>وصوله إلى مكتبنا</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabcontent" id="Tokyo"><span class="topright" onclick="toggleCity(event, 'Tokyo')">X</span>
+<h3>منتجاتك الجاهزة للتوصيل</h3>
+<span style="color: #000000; background-color: #ffffff;"> <a style="background-color: #cccccc; color: #000000;" href="https://yallawaseet.myshopify.com/blogs/order-history/1" target="_blank">التحقق من صور منتجاتك ☑️</a> </span>
+<h3>تكلفة التوصيل الدولي</h3>
+<p>10kg : الوزن المقاس</p>
+<p>4kg = 30 X 20 X 50 / 5000 = الحجم المقاس</p>
+<p>تكلفة الشحن 30 دولار. يرجى دفع تكلفة الشحن من خلال الرابط أدناه</p>
+<a style="background-color: #cccccc; color: #000000;" href="https://www.paypal.com" target="_blank">رابط الدفع☑️</a>
+<h3>التوصيل الدولي</h3>
+<p>شركة الشحن : فيديكس</p>
+<p>رقم التتبع : 7740403494343</p>
+<p>سيستلم رجل التوصيل شحنتك في اليوم القادم الذي دفعته تكلفة التوصيل</p>
+<p>(إذا كانت عطلة نهاية الأسبوع غدا, فيستلمه يوم الإثنين القادم)</p>
+<p>يرجى التحقق من تتبع الشحن أدناه تحقق في علامة التبويب "الشحن الدولي"ـ</p>
+<a style="background-color: #cccccc; color: #000000;" href="https://www.paypal.com" target="_blank">التحقق من حالة التوصيل☑️</a></div>
+<script>
+function toggleCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+   
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    var prev_state_display = document.getElementById(cityName).style.display;
+    
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    
+    if( prev_state_display === "none"){
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    } else {
+        document.getElementById(cityName).style.display = "none";
+        evt.currentTarget.className.replace(" active", "");
+    }
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
